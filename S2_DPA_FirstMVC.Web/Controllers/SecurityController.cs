@@ -12,5 +12,15 @@ namespace S2_DPA_FirstMVC.Web.Controllers
         {
             return View();
         }
+   
+
+    public IActionResult Login(string email, string password)
+    {
+        if (email=="19100188@ue.edu.pe" && password =="12345678")
+        {
+                return RedirectToAction("Index", "Home", new { area = "Marketing" });
+        }
+        return RedirectToAction("Index");
+    }
     }
 }
